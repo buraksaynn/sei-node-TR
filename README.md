@@ -129,6 +129,7 @@ systemctl restart seid
 journalctl -fu seid -o cat
 ```
 
+```sh
 //oto kurulum için
 cd
 rm $HOME/sei -rf
@@ -142,6 +143,7 @@ mv $HOME/sei-chain $HOME/sei
 systemctl restart seid
 journalctl -fu seid -o cat
 
+```sh
 # 1.0.5b Güncellemesi
 
 //manuel kurulum için
