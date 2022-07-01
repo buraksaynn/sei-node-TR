@@ -129,6 +129,33 @@ systemctl restart seid
 journalctl -fu seid -o cat
 ```
 
+//oto kurulum için
+cd
+rm $HOME/sei -rf
+git clone https://github.com/sei-protocol/sei-chain.git && cd $HOME/sei-chain
+git checkout 1.0.5beta
+make install
+go build -o build/seid ./cmd/seid
+chmod +x ./build/seid && sudo mv ./build/seid /usr/local/bin/seid
+mv ~/go/bin/seid /usr/local/bin/seid
+mv $HOME/sei-chain $HOME/sei
+systemctl restart seid
+journalctl -fu seid -o cat
+
+# 1.0.5b Güncellemesi
+
+//manuel kurulum için
+cd
+rm $HOME/sei-chain -rf
+git clone https://github.com/sei-protocol/sei-chain.git && cd $HOME/sei-chain
+git checkout 1.0.5beta
+make install
+go build -o build/seid ./cmd/seid
+chmod +x ./build/seid && sudo mv ./build/seid /usr/local/bin/seid
+mv ~/go/bin/seid /usr/local/bin/seid
+systemctl restart seid
+journalctl -fu seid -o cat
+
 //UnJail
 seid tx slashing unjail   --broadcast-mode=block   --from=wallet chain-id=sei-testnet-2
 ```
@@ -140,12 +167,4 @@ seid tx slashing unjail   --broadcast-mode=block   --from=wallet chain-id=sei-te
 Teşekkürler <3
 
 
-# Hesaplar:
-
-[<img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="16px"> Twitter   ](https://twitter.com/Ruesandora0) 
-[<img src="https://cdn-icons-png.flaticon.com/512/1336/1336494.png" width="16px"> Forum   ](https://forum.rues.info/index.php)
-[<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="16px"> Telegram Announcement   ](https://t.me/RuesAnnouncement)
-[<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="16px"> Telegram Chat   ](https://t.me/RuesChat)
-[<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="16px"> Telegram Node   ](https://t.me/RuesNode)
-[<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="16px"> Telegram Node Chat](https://t.me/RuesNodeChat)
 
