@@ -145,7 +145,7 @@ mv $HOME/sei-chain $HOME/sei
 systemctl restart seid
 journalctl -fu seid -o cat
 
-```sh
+
 //manuel kurulum için
 cd
 rm $HOME/sei-chain -rf
