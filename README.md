@@ -129,6 +129,8 @@ systemctl restart seid
 journalctl -fu seid -o cat
 ```
 
+# 1.0.5b Güncellemesi
+
 ```sh
 //oto kurulum için
 cd
@@ -144,8 +146,6 @@ systemctl restart seid
 journalctl -fu seid -o cat
 
 ```sh
-# 1.0.5b Güncellemesi
-
 //manuel kurulum için
 cd
 rm $HOME/sei-chain -rf
